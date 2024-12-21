@@ -11,6 +11,9 @@ export default {
         'customWhite': 'hsl(0, 0%, 100%)',
         'customBlack': 'hsl(0, 0%, 7%)'
       },
+      fontSize: {
+        'para': '18px'
+      }
     },
   },
   variants: {
