@@ -1,11 +1,10 @@
 <script setup></script>
 
 <template>
-  <div class="flex flex-col-reverse md:grid md:grid-cols-12 gap-10 bg-customWhite h-full max-h-100">
-
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-4 bg-customWhite">
     <!-- MAIN Col 1 -->
     <!-- create and schedule content + write your content: row-reverse on small devices -->
-    <div class="col-span-1 md:col-span-2">
+    <div class="col-span-1 md:col-span-2 order-2 md:order-1">
       <!-- row A -->
       <div class="grid grid-rows-2 gap-4">
         <div class="bg-lightYellow p-6 rounded-xl shadow-md">
@@ -16,19 +15,19 @@
             ><br />
             <span class="text-darkPurple">quicker.</span>
           </p>
-          <div class="mt-4">
+          <div class="pt-4">
             <img
-              class="img-fluid w-48"
+              class="img-fluid w-54"
               alt="create post"
               src="../assets/images/illustration-create-post.webp"
             />
           </div>
         </div>
         <!-- row B -->
-        <div class="text-4xl bg-darkYellow p-6 rounded-xl shadow-md">
-          <p class="text-xl md:text-2xl lg:text-3xl font-semibold">
-            Write your<br />content<br />using AI.
-          </p>
+        <div
+          class="text-xl md:text-2xl lg:text-3xl bg-darkYellow px-6 py-9 rounded-xl shadow-md"
+        >
+          <p class="font-semibold">Write your<br />content<br />using AI.</p>
           <div class="mt-2">
             <img
               class="img-fluid h-64"
@@ -40,21 +39,18 @@
       </div>
     </div>
     <!-- MAIN Col 2 -->
-    <!-- needs to have 2 rows: top row & bottom row -->
+    <!-- top row -->
     <!-- ........................................Sub col 1........................................ -->
-    <div class="col-span-1 md:col-span-10">
+    <div class="col-span-1 md:col-span-10 order-1 md:order-2">
       <!-- Parent Grid with Additional Row -->
-      <div class="grid grid-rows-2 gap-4 h-full">
+      <div class="grid grid-rows-1 md:grid-rows-2 gap-4">
         <!-- First Row: Two Columns -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- Left Column -->
-          <div class="grid grid-rows-2 gap-4 h-full">
+          <div class="grid grid-rows-2 gap-4">
             <!-- Row 1 -->
-            <!-- social media -->
-            <div
-              class="bg-darkPurple px-4 py-10 rounded-xl text-center shadow-md max-h-40"
-            >
-              <p class="text-xl md:text-2xl lg:text-3xl font-semibold">
+            <div class="bg-darkPurple px-4 py-8 rounded-xl text-center shadow-md">
+              <p class="text-2xl md:text-3xl lg:text-4xl font-semibold">
                 <span class="text-customWhite">Social Media</span>
                 <span class="text-darkYellow">10x</span>
                 <br />
@@ -62,67 +58,71 @@
               </p>
               <div class="flex justify-center py-4">
                 <img
-                  class="img-fluid w-24"
+                  class="w-20 h-auto"
                   alt="five-stars"
                   src="../assets/images/illustration-five-stars.webp"
                 />
               </div>
               <p class="text-sm text-customWhite">Over 4,000 5-star reviews</p>
             </div>
+
             <!-- Row 2 -->
-            <div class="h-full overflow-hidden">
+            <div class="maxh-full overflow-hidden">
               <!-- Inner Grid for Two Columns -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-fit">
                 <!-- Column 1 -->
                 <div
-                  class="bg-customWhite p-4 rounded-md shadow-md max-h-40 overflow-hidden"
+                  class="bg-customWhite p-4 rounded-md shadow-md flex flex-col overflow-hidden"
                 >
-                  <div class="overflow-hidden w-full aspect-[4/3] relative">
-                    <img
-                      class="object-contain w-full h-full max-w-full absolute right-[-25%]"
-                      alt="platforms"
-                      src="../assets/images/illustration-multiple-platforms.webp"
-                    />
-                  </div>
+                  <img
+                    class="img-fluid w-auto h-auto"
+                    alt="platforms"
+                    src="../assets/images/illustration-multiple-platforms.webp"
+                    style="transform: translateX(100px)"
+                  />
                   <p
-                    class="text-xl md:text-2xl lg:text-3xl font-semibold text-customBlack"
+                    class="text-xl md:text-2xl lg:text-3xl font-semibold text-customBlack text-start"
                   >
                     Manage<br />multiple<br />accounts and<br />platforms.
                   </p>
                 </div>
                 <!-- Column 2 -->
-                <div
-                  class="bg-darkYellow p-4 rounded-md shadow-md max-h-40 overflow-hidden"
-                >
+                <div class="bg-darkYellow rounded-md shadow-md flex flex-col">
                   <p
-                    class="text-xl md:text-2xl lg:text-3xl font-semibold text-customBlack"
+                    class="text-xl md:text-2xl lg:text-3xl font-semibold text-customBlack mb-4 p-4"
                   >
                     Maintain a<br />consistent<br />posting<br />schedule.
                   </p>
-                  <img
-                    class="img-fluid relative bottom-[-30%]"
-                    alt="schedule"
-                    src="../assets/images/illustration-consistent-schedule.webp"
-                  />
+                  <div class="overflow-hidden h-32 px-4">
+                    <img
+                      class="w-full object-cover"
+                      alt="schedule"
+                      src="../assets/images/illustration-consistent-schedule.webp"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- Right Column -->
           <!-- schedule to social media -->
           <div
-            class="bg-lightPurple p-6 rounded-xl shadow-md h-full flex flex-col justify-between overflow-hidden"
+            class="bg-lightPurple rounded-xl shadow-md h-auto flex flex-col justify-between overflow-hidden"
           >
             <!-- Content -->
-            <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-customBlack">
+            <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-customBlack p-6">
               Schedule to<br />social media.
             </p>
-            <!-- <img
-              class="img-fluid relative right-[-40%]"
-              alt="schedule"
-              src="../assets/images/illustration-schedule-posts.webp"
-            /> -->
-            <p class="text-customBlack text-para break-words">
+            <div class="overflow-hidden max-h-[370px] py-2">
+              <img
+                class="w-full object-cover"
+                alt="schedule-chart"
+                src="../assets/images/illustration-schedule-posts.webp"
+                style="transform: translateX(150px)"
+              />
+            </div>
+            <p class="text-customBlack font-semibold text-para break-words p-6">
               Optimize post timings<br />to publish content at<br />the perfect time
               for<br />your audience
             </p>
@@ -130,12 +130,14 @@
         </div>
         <!-- Second Row -->
         <!-- bottom row -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-fit">
           <!-- Add your content here -->
           <!-- <p>Content for the new row below</p> -->
-          <div class=" col-span-1 md:col-span-2 order-2 md:order-1 bg-customWhite p-6 rounded-md shadow-md">
+          <div
+            class="col-span-1 md:col-span-3 order-2 md:order-1 bg-customWhite p-6 rounded-md shadow-md"
+          >
             <p class="text-customBlack py-4">
-              <span class="font-semibold text-xl md:text-3xl lg:text-4xl">>56% </span>
+              <span class="font-semibold text-xl md:text-4xl">>56% </span>
               <br />
             </p>
             <span class="text-para text-customBlack">faster audience growth </span>
@@ -147,20 +149,20 @@
               />
             </div>
           </div>
-          <div class="col-span-1 md:col-span-10 order-1 md:order-2 bg-darkPurple p-6 rounded-md shadow-md">
-            <div class="grid grid-cols-2">
-              <div>
-                <img
-                  class="object-contain w-48 img-fluid"
-                  alt="audience"
-                  src="../assets/images/illustration-grow-followers.webp"
-                />
-              </div>
-              <div>
-                <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-customWhite">
-                  Grow followers<br />with non-stop<br />content.
-                </p>
-              </div>
+          <div
+            class="col-span md:col-span-9 order-1 md:order-2 bg-darkPurple p-6 rounded-md shadow-md"
+          >
+            <div class="flex items-center">
+              <img
+                class="object-contain w-48 img-fluid"
+                alt="audience"
+                src="../assets/images/illustration-grow-followers.webp"
+              />
+              <p
+                class="text-xl md:text-2xl lg:text-3xl font-semibold text-customWhite ml-12"
+              >
+                Grow followers<br />with non-stop<br />content.
+              </p>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default {
       },
       fontSize: {
         'para': '18px'
-      }
+      },
     },
   },
   variants: {
